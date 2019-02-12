@@ -10,9 +10,8 @@ package reporte.atlantida.automatico.main;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import reporte.atlantida.control.Control;
+import reporte.atlantida.automatico.control.Controlador;
 import reporte.atlantida.estructura.ReporteAtlantidaExcepcion;
-import static reporte.atlantida.estructura.ReporteAtlantidaExcepcion.ERROR_CONFIGURACION_01;
 
 /**
  * Inicio principal del programa.
@@ -22,7 +21,7 @@ import static reporte.atlantida.estructura.ReporteAtlantidaExcepcion.ERROR_CONFI
  * @version 1.0 24-oct-2018
  */
 public class Main {
-    
+
     /**
      * Constructor privado, clase de comportamiento estático.
      */
@@ -33,21 +32,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        //Inicializador de aplicativo
-        Control control = new Control("I");
-        
-        //Ciclo de ejecucion
         try {
-            if(control.configurar()){
-                while(true){
-                    control.iniciar();
-                }
-            }
+            //Despliegue de aplicacion
+            Controlador app = new Controlador(); //Reporte Atlantida Automatico            
         } catch (ReporteAtlantidaExcepcion ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, ERROR_CONFIGURACION_01, ex);
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            System.exit(0);
         }
-        System.exit(0);
     }
-    
+
 }
