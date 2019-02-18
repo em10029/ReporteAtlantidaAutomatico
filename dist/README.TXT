@@ -8,7 +8,7 @@
 * con Informática Atlántida S.A.                                                     *
 *                                                                                    *
 **************************************************************************************
-* Descripción: ReporteAtlántidaAutomático                                            *
+* Descripción: ReporteAtlantidaAutomatico                                            *
 **************************************************************************************
 *                                                                                    *
 * Aplicación para la generación de reportes de Caja Empresarial.                     *
